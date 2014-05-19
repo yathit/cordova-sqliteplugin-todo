@@ -40,4 +40,6 @@ Build and run
     phonegap build ios
     cordova run ios
     
-    
+#### Credits ####
+        
+Special thanks to Stefano Straus <stefano@straus.it> for his help in setup, testing and bug reports.

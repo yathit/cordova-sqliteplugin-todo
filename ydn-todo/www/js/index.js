@@ -28,7 +28,6 @@ var app = {
     bindEvents: function() {
       document.addEventListener('deviceready', this.onDeviceReady, false);
 
-      window.todoApp = new Todo();
 
     },
     // deviceready Event Handler
@@ -47,6 +46,7 @@ var app = {
       } else {
         console.log('No SqlitePlugin not found.');
       }
+      window.todoApp = new Todo();
       window.todoApp.init();
     }
 };

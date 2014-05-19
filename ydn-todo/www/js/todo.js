@@ -1,4 +1,22 @@
+// Copyright 2012 YDN Authors. All Rights Reserved.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//      http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS-IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
 
+/**
+ * @fileoverview Todo list exmaple using SqlitePlugin on Phonegap.
+ *
+ * @author kyawtun@yathit.com (Kyaw Tun)
+ */
 
 var Todo = function() {
   this.console_div = document.getElementById('debug-console');
@@ -78,13 +96,7 @@ Todo.prototype.addTodo = function () {
 
 Todo.prototype.init = function() {
   this.log('todo app init');
-  ydn.debug.log('ydn.db', 'fine');
-
-  if (window.sqlitePlugin !== undefined) {
-    this.log('SqlitePlugin .');
-  } else {
-    this.log('No SqlitePlugin .');
-  }
+  ydn.debug.log('ydn.db', 'info', document.getElementById('debug-console'));
 
   var schema = {
     stores:[{
@@ -95,22 +107,21 @@ Todo.prototype.init = function() {
 
   var db_name = 'todo_2';
 
-  var options = {mechanisms: ['indexeddb', 'websql']};
+  var options = {mechanisms: ['indexeddb', 'sqlite', 'websql']};
 
   /**
    * @type {ydn.db.Storage}
    */
   this.db = new ydn.db.Storage(db_name, schema, options);
 
-  this.db.addEventListener('ready', function(e) {
-    var err = e.getError();
+  this.db.onReady(function(err) {
     if (err) {
       this.log('error ' + JSON.stringify(err));
       throw err;
     } else {
-      this.log(db + 'ready');
+      this.log(this.db + ' ready');
     }
-  }, false, this);
+  }, this);
 
   this.getAllTodoItems();
 
