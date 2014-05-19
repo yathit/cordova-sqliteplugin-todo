@@ -1,0 +1,18 @@
+
+.todo {
+    color: #222;
+    font: 14px Arial;
+    text-align: left;
+    text-transform: none;
+}
+
+.todo u {
+    margin: 0;
+    padding: 0;
+}
+
+.todo a {
+    color: #3D5C9D;
+    text-decoration: none;
+    cursor: pointer;
+}
