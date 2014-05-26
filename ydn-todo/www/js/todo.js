@@ -107,7 +107,7 @@ Todo.prototype.init = function() {
 
   var db_name = 'todo_2';
 
-  var options = {mechanisms: ['indexeddb', 'sqlite', 'websql']};
+  var options = {mechanisms: ['sqlite', 'indexeddb', 'websql']};
 
   /**
    * @type {ydn.db.Storage}
@@ -137,7 +137,7 @@ Todo.prototype.init = function() {
   document.getElementById('add-todo').onclick = function() {
     me.addTodo();
     return false;
-  }
+  };
 }
 
 
