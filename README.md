@@ -28,6 +28,7 @@ Create phonegap app
 Clone the repo and copy the files 
     
     git clone git clone https://github.com/yathit/cordova-sqliteplugin-todo.git
+    cp -r cordova-sqliteplugin-todo/ydn-todo/www/* ydn-todo/www/
     
 Build and run
     
