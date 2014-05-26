@@ -6,7 +6,7 @@ Todo list example for Cordova-SQLitePlugin using ydn-db
 Setup for iOS
 -------------
 
-Ensure you have node.js (http://nodejs.org/) and XCode available on your Mac.
+Ensure you have [node.js](http://nodejs.org/) and XCode available on your Mac.
 
 Install phonegap and cordova
 
