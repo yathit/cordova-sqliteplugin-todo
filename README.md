@@ -23,7 +23,7 @@ Install plugins,
     
 Create phonegap app
     
-    phonegap create ydn-todo ydn.todo ydn-todo
+    cordova create ydn-todo ydn.todo "YDN-DN todo"
     
 Clone the repo and copy the files 
     
