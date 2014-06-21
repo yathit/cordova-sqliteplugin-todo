@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="ydn.todo" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>YDN-DB todo</name>
+    <description>
+        YDN-DB todo app using SQLitePlugin.
+    </description>
+    <author email="kyawtun@yathit.com" href="http://dev.yathit.com">
+        YDN developer
+    </author>
+    <content src="index.html" />
+    <plugins>
+        <plugin name="SQLitePlugin" value="SQLitePlugin" />
+    </plugins>
+    <access origin="*" />
+</widget>
